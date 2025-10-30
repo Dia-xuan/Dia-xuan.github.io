@@ -1,0 +1,72 @@
+---
+title: "Resume"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: cerulean
+---
+
+## Yaxuan Deng
+
+### Education
+•	Columbia University, Mailman School of Public Health		
+
+Master of Public Health (MPH) in Biostatistics				       
+
+•	Southern University of Science and Technology        		Shenzhen, Guangdong
+
+Bachelor of Science (BS) in Statistics						
+
+•	University of California, Berkeley                                                                                                
+Berkeley International Study Program 									
+
+Relevant Coursework: Modern Statistical Prediction and Machine Learning, Multivariate Statistical Analysis, Time Series Analysis
+Bayesian Statistics, Statistical Linear Models
+Public Health Interventions, Health Systems
+
+### Work & Research Experience
+
+#### Peking University Shenzhen Hospital 							                                                                                 
+Statistical Analyst, Clinical Research Institute        			    	06/2023 – 01/2024                                                                                          
+•	Analyzed 647,217 patient records from 2015 to 2023 at the Peking University Shenzhen Hospital. Developed and cleaned large-scale hospital datasets to ensure data integrity.
+
+•	Designed and implemented logistic regression models to assess the impact of weekend admissions on mortality rates and hospitalization costs.
+
+•	Conducted univariate and multivariate statistical analysis to identify key demographic and clinical predictors of patient outcomes.
+
+•	Findings provided insights into hospital resource allocation and policy recommendations.
+
+#### University of South Florida											
+Research Assistant: The Impact of COVID-19 School Closures and Disruptions on Chinese Preschool Readiness (Supervisor: Prof. Tan)
+
+01/2023 – 09/2023  
+
+•	Conducted analysis on parenting, child ADHD and school readiness. 
+
+•	Conducted analysis on family structure and school readiness during the COVID-19. 
+
+•	Tested the presence of siblings and caregivers on child school readiness development. 
+
+#### Breast Cancer Data Analysis | Berkeley, CA
+Academic Research        										  	   09/2022 - 11/2022
+
+Supervisor: Prof. Tiffany Tang					                                                                                 
+•	Led data cleaning and exploratory data analysis on clinical data for breast cancer patients.
+
+•	Developed and validated a Random Forest classification model to predict high vs. low survival.
+
+•	Implemented feature selection using Random Forest, identifying key predictors (e.g., age at diagnosis, tumor size) associated with patient survival.
+
+•	Applied k-means clustering and factor analysis to classify survival risk groups, optimizing model parameters via 5-fold cross-validation.
+
+### Research
+
+•	Tan, T. X., Wang, J. H. Zhou, Y., &Deng, Y. (2023). Young children’s pre-academic and social skills: Role of parents’ locus of control and children’s ADHD behaviours, Oxford Review of Education, 
+DOI: 10.1080/03054985.2023.2268517
+
+### Skills
+
+•	R, Python, SAS, Matlab, Stata
+
+

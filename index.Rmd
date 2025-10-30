@@ -1,0 +1,26 @@
+---
+title: "Dia's website"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: cerulean
+---
+
+## Welcome! This is Dia.
+
+I'm currently study biostatistics at Columbia.
+
+- [My Resume](resume.html)
+- email: <yd2810@cumc.columbia.edu>
+- [My Github:](http://github.com/Dia-xuan/)
+
+## Allow me to introduce my dog and my lovebird.
+
+This is Lulu:
+
+<img src="image/Lulu.jpeg" style="width:30%">
+
+This is Cini:
+
+<img src="image/Xini.jpeg" style="width:30%">
