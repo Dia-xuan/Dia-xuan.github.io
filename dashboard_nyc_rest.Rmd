@@ -1,0 +1,91 @@
+---
+title: "NYC Restaurant Inspections – Interactive Dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(lubridate)
+library(forcats)
+library(p8105.datasets)
+library(plotly)
+library(flexdashboard)
+```
+
+```{r}
+data("rest_inspec")
+# 393130 obs
+```
+
+```{r}
+rest <- rest_inspec %>% 
+  mutate(inspection_date = as.Date(inspection_date),
+         year = year(inspection_date),
+         borough = as.factor(boro),
+         grade = as.factor(grade)) %>% 
+  filter(year>=2019, !is.na(score), !is.na(borough),borough!="0")
+# 2019-01-02 - 2019-10-05
+```
+
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+rest %>% 
+mutate(hover = paste("Borough:", borough,
+"<br>Date:", inspection_date,
+"<br>Score:", score)) %>% 
+plot_ly(
+x = ~inspection_date, y = ~score,
+type = "scatter", mode = "markers",
+color = ~borough, text = ~hover, hoverinfo = "text",
+alpha = 0.5
+) %>% 
+layout(yaxis = list(title = "Inspection score (lower is better)"),
+xaxis = list(title = "Date"))
+
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+rest %>% 
+  mutate(borough = fct_reorder(borough, score, .fun = median, .desc = TRUE)) %>% 
+  plot_ly(
+    x = ~borough, y=~score,
+    type = "box", color = ~borough
+  ) %>% 
+  layout(xaxis = list(title = "Borough"),
+         yaxis = list(title = "Inspection score"))
+```
+
+### Chart C
+
+```{r}
+rest %>% 
+  filter(!is.na(grade)) %>% 
+  count(borough,grade,name = "n") %>% 
+  group_by(borough) %>% 
+  mutate(pct = n/sum(n)) %>% 
+  ungroup() %>% 
+  plot_ly(
+    x = ~borough, y = ~pct, color = ~grade,
+    type = "bar"
+  ) %>% 
+ 
+  layout(
+   
+    yaxis = list(title="Proportion"),
+    xaxis = list(title="Borough")
+  )
+```

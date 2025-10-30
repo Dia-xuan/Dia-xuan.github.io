@@ -14,6 +14,7 @@ I'm currently study biostatistics at Columbia.
 - [My Resume](resume.html)
 - email: <yd2810@cumc.columbia.edu>
 - [My Github](http://github.com/Dia-xuan/)
+- [Problem 2](dashboard_nyc_rest.html)
 
 ## Allow me to introduce my dog and my lovebird.
 
